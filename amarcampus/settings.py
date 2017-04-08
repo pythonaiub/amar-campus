@@ -25,8 +25,7 @@ SECRET_KEY = '()xiuq^uc+h1*#0a5q)rtns7^8j2l_bnn8hzifbrp+16f0t+13'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'amarcampus.herokuapp.com']
 
 # Application definition
 
