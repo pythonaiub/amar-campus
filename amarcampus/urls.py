@@ -25,6 +25,7 @@ urlpatterns = [
     # Apps
     url(r'^student/', include('student.urls')),
     url(r'^blog/', include('blog.urls')),
+
     url(r'^$', views.home, name='all-post'),
     url(r'^campus-post/$', views.capmus_post, name='campus-post'),
     url(r'^batch-post/$', views.batch_post, name='batch-post'),
