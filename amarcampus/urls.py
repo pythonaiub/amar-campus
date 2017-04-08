@@ -20,6 +20,9 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # For AllAuth
+    url(r'^accounts/', include('allauth.urls')),
+    # Apps
     url(r'^student/', include('student.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^$', views.home, name='all-post'),
