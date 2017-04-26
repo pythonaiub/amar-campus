@@ -68,12 +68,14 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'amarcampus.urls'
-
+print(os.path.join(BASE_DIR, 'templates', 'allauth'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'templates',
+            # 'templates',
+            # os.path.join(BASE_DIR, 'templates', 'allauth')
+            os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth')
         ],
         'APP_DIRS': True,
@@ -83,6 +85,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'allauth.account.context_processors.account',
+                # 'allauth.socialaccount.context_processors.socialaccount',
             ],
         },
     },
@@ -153,3 +157,4 @@ STATICFILES_DIRS = [
 
 # For AllAuth
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
